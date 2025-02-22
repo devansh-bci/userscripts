@@ -1,7 +1,10 @@
 (() => {
   "use strict";
-  console.log("index js loaded 1..."),
-    window.enableFeature_1 && console.log("Feature 1 loaded successfully..."),
-    window.enableFeature_2 && console.log("Feature 2 loaded successfully..."),
-    (window.MyLibrary = {});
+  console.log("loader js loaded..."),
+    window.ps_test_feature_1 &&
+      (console.log("Test Feature 1 loaded successfully..."),
+      setTimeout(() => {
+        document.getElementsByTagName("html")[0].style.border =
+          "10px solid blue";
+      }, 5e3));
 })();
